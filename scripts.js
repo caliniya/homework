@@ -2,7 +2,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     // 模组版本数据
     const versions = [
-        { version: '作业', description: '作业', exists: false },
+        { version: '语文', description: '语文作业', exists: true },
+         { version: '数学', description: '数学作业', exists: true },
+          { version: '英语', description: '英语作业', exists: true },
+           { version: '物理', description: '物理作业', exists: true },
+        { version: '化学', description: '化学作业', exists: true },
+        { version: '地理', description: '地理作业', exists: true },
 
         // 可以根据需要添加更多版本数据
     ];
@@ -18,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // 如果文件存在，则创建下载链接
         if (ver.exists) {
             const downloadLink = document.createElement('a');
-            downloadLink.href = `文件/作业v${ver.version}.zip`;
+            downloadLink.href = `文件/${ver.version}.zip`;
             downloadLink.textContent = '下载';
             downloadLink.setAttribute('download', ''); // 添加 download 属性使其成为下载链接
             li.appendChild(downloadLink);
